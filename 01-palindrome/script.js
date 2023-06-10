@@ -14,7 +14,19 @@
 */
 
 function palindrome(str) {
-    // Напишите код здесь
+    
+    const arr = str.toLowerCase().split('');
+    let sum = '';
+    let sumreverse = '';
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+        sumreverse = arr[i] + sumreverse;
+    }
+    if (sum === sumreverse) {
+        return true;
+    } else {
+        return false;
+    };
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
