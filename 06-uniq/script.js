@@ -8,8 +8,12 @@
 */
 
 function uniq(arr) {
-    // Напишите код здесь
+    newArr = arr.filter(function (item, position, array) {
+        return array.lastIndexOf(item) === position;
+    });
+    return newArr;
 }
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
